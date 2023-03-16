@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+
+<body>
+    <script>
+        // object 物件型別 資料一樣 存放位置也不同
+        let x = [0, 1, 2]
+        let y = [0, 1, 2]
+        console.log('x=y ?', x == y)
+
+        const myObj = { '123': 'value1', 'key2': 'value2', 'key3': 'value3' };
+
+        //如果我想取得 value1，可以呼叫 myObj 變數，並且使用中括號裡面放 key (名稱記得加引號)
+        console.log('value1:', myObj['123']);
+
+        //另一種取得 value1 的方法，可以直接用「點表示法」來呼叫 Object 裡的 key
+        console.log('value3:', myObj.key3);
+
+        //如果我想取得對應 value，但我還不知道 key 的名稱，他可能是從伺服器來的某一筆字串資料。
+        const keyFromServer = 'key2';
+
+        //取得 key 之後，再去問 myObj 有沒有對應的 value，如果有就印出來
+        //注意：這邊使用的是變數，而非剛剛的字串，所以中括號裡面沒有引號
+        console.log('value2:', myObj[keyFromServer]);
+
+        //如果我想修改 value1，我可以在左邊直接呼叫它，並且等於右邊賦予新值即可。
+        myObj.key4 = 'value4';
+        console.log('myObj:', myObj);
+
+        myObj.key2 = 'New value2';
+        console.log('myObj:', myObj);
+
+        //如果我想刪除 key3，我可以使用 delete 指令即可。
+        delete myObj.key3;
+        console.log('myObj:', myObj);
+
+        //如果我想拿到所有的 keys values，可以使用物件原型 Object 裡的 keys, values 方法來取得。
+        console.log('myObj:', Object.keys(myObj));
+        console.log('myObj:', Object.values(myObj));
+        console.log('myObj:', Object.keys(myObj)[0]);
+        console.log('myObj:', Object.values(myObj)[2]);
+
+        //物件原型裡還有另一個方法更厲害，可以一次同時取得 keys & values。
+        console.log('myObj:', Object.entries(myObj));
+        //如果我想知道 Object 裡的資料有幾筆，可以再加上 .length 取得長度。
+        console.log('myObj:', Object.entries(myObj).length); 
+    </script>
+</body>
+
+</html>

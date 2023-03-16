@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+
+<body>
+    <script>
+        const myArray = ['My value1', 'My value2', 'My value3'];
+
+        //如果我想新增 value4，我可以使用陣列的 push() 方法，把值從後面加進去。
+        myArray.push('value4');
+        // unshift() 從前面加進去
+        myArray.unshift('123')
+        console.log('myArray:', myArray);
+        // shift() 從前面去除
+        myArray.shift()
+        // pop() 從後面去除
+        myArray.pop()
+        console.log('myArray:', myArray);
+
+        //當然也可以直接用中括號+索引值的方式去新增，但要小心 index 錯誤可能會產生 bug 問題。
+        myArray[2] = 'new 2'
+        myArray[6] = 'value5';
+        console.log('myArray:', myArray);
+        console.log('陣列長度:', myArray.length);
+
+        //如果我想取得對應 value1，我只需要用中括號+索引值(index)，index 是從 0 開始計算 。
+        console.log('value1:', myArray[0]);
+        console.log('value2:', myArray[1]);
+        console.log('value3:', myArray[2]);
+        console.log(myArray)
+        console.log('myArray[4] =', myArray[4])
+
+
+        //如果我想取得陣列長度，就是使用 .length 方法 。
+        console.log('陣列長度:', myArray.length);
+        // slice(從# , 到# 不包含 不會變更原陣列) 
+        console.log('slice', myArray.slice(1, 3));
+        console.log('after slice', myArray);
+        // splice(提取從# , 到# 不包含 變更原陣列) 
+        console.log('splice', myArray.splice(0, 1))
+        console.log('after slice', myArray);
+        // splice還可以新增資料並放到提取的位置
+        console.log('splice', myArray.splice(1, 1,
+            'a', 'b'))
+        console.log('after slice', myArray);
+    </script>
+</body>
+
+</html>

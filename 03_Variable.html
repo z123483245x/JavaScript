@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+
+<body>
+    <script>
+        // const 無法變更
+        const myName1 = 'Eason';
+        // myName1 = fef 
+        // 無法變更
+
+        // var 變數 
+        var myName2 = 'Alex'
+        myName2 = 'Eason'
+        console.log('Hello', myName2);
+
+        // Hoist 變數在output之下時 提升 
+        // var myName = null;
+        console.log('Hello', myName3);
+        var myName3 = 'Eason'
+
+        // let不能重複宣告
+        let myName4 = 'Eason';
+        // let myName4 = 'Eason';
+        console.log(myName4)
+
+
+    </script>
+</body>
+
+</html>

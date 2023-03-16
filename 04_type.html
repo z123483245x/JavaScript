@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type</title>
+</head>
+
+<body>
+    <h1></h1>
+    <script>
+        // String 字串
+        const myName = 'Eason';
+        console.log('myName:', myName);
+        console.log('typeof:', typeof myName);
+
+        const myGreet = "Hello ";
+        console.log(myGreet + myName);
+
+        const myh1 = document.querySelector('h1');
+        myh1.innerHTML = myGreet + myName;
+
+        const newStringUsingBacktick = `${myGreet}, I’m ${myName}.`; //ES6 之後可使用反引號  
+        console.log('newStringUsingBacktick:', newStringUsingBacktick);
+
+        //Number 數字
+        const maxValue = Number.MAX_VALUE;
+        console.log('maxValue:', maxValue);
+
+        const maxSafeInteger = Number.MAX_SAFE_INTEGER;
+        console.log('maxSafeInteger:', maxSafeInteger);
+
+        const minValue = Number.MIN_VALUE;
+        console.log('minValue:', minValue);
+
+
+        // BigInt 大整數  表示大於 2^53 的整數
+        // 無法與其他型態進行處理
+        const myBigInt = 9007199254740991n;
+        console.log('myBigInt:', myBigInt);
+
+        const myBigInt2 = BigInt(9007199254740991);
+        console.log('myBigInt2:', myBigInt2);
+
+        // const myNumber = 100;
+        // console.log('myBigInt + myNumber:', myBigInt + myNumber);
+
+        // Boolean 布林 0 or 1
+        const isRaining = false;
+
+        if (isRaining) {
+            console.log('call Uber Eats.');
+        }
+        else {
+            console.log('go out for breakfast.');
+        }
+
+        // Null  空值
+        let myData = null;
+        if (myData) {
+            console.log('myData1:', myData);
+        }
+        else {
+            console.log('I got no data.');
+        }
+
+        myData = 'OK, I got some data from server now.';
+        if (myData) {
+            console.log('myData2:', myData);
+        }
+
+        // undefined  未定義
+        const hisName = 'Eason';
+        console.log('hisName:', hisName);
+        // console.log('yourName:', yourName);
+
+        // Symbol 
+        const string1 = 'Eason';
+        const string2 = 'Eason';
+        console.log('is string1 === string2? :', string1 === string2);
+
+        const symbol1 = Symbol('Eason');
+        const symbol2 = Symbol('Eason');
+        console.log('is symbol1 === symbol2? :', symbol1 === symbol2);
+
+    </script>
+</body>
+
+</html>
